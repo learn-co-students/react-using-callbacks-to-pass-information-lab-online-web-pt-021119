@@ -27,10 +27,8 @@ setCurrentColor = (hex) => {
   })
 }
 
-sendCurrentColor = () => (this.state.color)
-
 currentColor = () => {
-  this.props.color;
+  this.state.color;
 }
 
   render() {

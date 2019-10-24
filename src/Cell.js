@@ -11,7 +11,7 @@ export default class Cell extends Component {
 
   newColor = () => {
     this.setState({
-      color: this.props.sendCurrentColor()
+      color: this.props.currentColor()
     })
   }
 
