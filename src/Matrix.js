@@ -3,10 +3,14 @@ import chromeBoi from './data.js'
 import Cell from './Cell.js'
 import ColorSelector from './ColorSelector.js'
 
+
 export default class Matrix extends Component {
 
   constructor() {
     super()
+    this.state = {
+      color: '#FFF'
+    }
   }
 
   genRow = (vals) => (
@@ -17,6 +21,17 @@ export default class Matrix extends Component {
     this.props.values.map((rowVals, idx) => <div key={idx} className="row">{this.genRow(rowVals)}</div>)
   )
 
+setCurrentColor = (hex) => {
+  this.setState({
+    color: hex
+  })
+}
+
+sendCurrentColor = () => (this.state.color)
+
+currentColor = () => {
+  this.props.color;
+}
 
   render() {
     return (
